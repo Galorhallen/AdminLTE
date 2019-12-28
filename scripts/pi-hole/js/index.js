@@ -321,9 +321,7 @@ function updateClientsOverTime() {
           i < colors.length
             ? colors[i]
             : "#" +
-              parseInt(String(Math.random() * 0xffffff), 10)
-                .toString(16)
-                .padStart(6, "0"),
+              (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6),
         pointRadius: 0,
         pointHitRadius: 5,
         pointHoverRadius: 5,
